@@ -69,12 +69,14 @@
 					$(".songtitles").html(title);
 					my_media = new Media(src,function() {
 					console.log("playAudio():Audio Success");
+					alert("success"+my_media);
 					},
 						// error callback
 					  function(err) {
+					  		alert("error"+my_media);
 					console.log("playAudio():Audio Error: "+err);
 					});
-				alert(my_media);	
+					
 				my_media.play();
 				$("#media-duration").html(src);
 				pos=my_media.getCurrentPosition();
